@@ -1,15 +1,16 @@
 #
-# TODO: add icon and desktop
+# TODO: add icon
 #
 Summary:	Another (PSF) Font Editor
 Summary(pl):	afe (jeszcze jeden edytor fontów PSF)
 Name:		afe
 Version:	20020901
-Release:	1
+Release:	2
 License:	GPLv2
 Group:		X11/Applications
 Source0:	http://www.mat.uni.torun.pl/~witek/%{name}-%{version}.src.tar.bz2
 # Source0-md5:	fb82267c1f0fd347c189a40595f3b430
+Source1:	%{name}.desktop
 Requires:	/usr/bin/wish
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -25,12 +26,13 @@ z wieloma fontami równocze¶nie.
 %prep
 %setup -q
 
-%build
-
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_bindir}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_desktopdir}}
+
 install %{name} $RPM_BUILD_ROOT%{_bindir}
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -38,3 +40,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README AUTHORS
 %attr(755,root,root) %{_bindir}/*
+%{_desktopdir}/*
