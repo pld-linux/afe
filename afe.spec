@@ -1,3 +1,6 @@
+#
+# TODO: add icon and desktop
+#
 Summary:	Another (PSF) Font Editor
 Summary(pl):	afe (jeszcze jeden edytor fontów PSF)
 Name:		afe
