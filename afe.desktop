@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Afe
+Comment=Another (PSF) Font Editor
+Comment[pl]=Jeszcze jeden edytor fontów PSF
+#Icon=
+Exec=afe
+Terminal=false
+Categories=Development;
+# vi: encoding=utf-8
