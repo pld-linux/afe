@@ -6,7 +6,7 @@ Summary(pl):	afe (jeszcze jeden edytor fontów PSF)
 Name:		afe
 Version:	20020901
 Release:	2
-License:	GPLv2
+License:	GPL v2
 Group:		X11/Applications
 Source0:	http://www.mat.uni.torun.pl/~witek/%{name}-%{version}.src.tar.bz2
 # Source0-md5:	fb82267c1f0fd347c189a40595f3b430
