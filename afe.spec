@@ -2,7 +2,7 @@
 # TODO: add icon
 #
 Summary:	Another (PSF) Font Editor
-Summary(pl):	afe (jeszcze jeden edytor fontów PSF)
+Summary(pl.UTF-8):   afe (jeszcze jeden edytor fontÃ³w PSF)
 Name:		afe
 Version:	20020901
 Release:	2
@@ -19,9 +19,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Afe is simple PSF font editor written in Tcl/Tk. Editing many fonts
 with afe is very easy.
 
-%description -l pl
-Afe to prosty edytor fontów PSF napisany w Tcl/Tk.  Pozwala na pracê
-z wieloma fontami równocze¶nie.
+%description -l pl.UTF-8
+Afe to prosty edytor fontÃ³w PSF napisany w Tcl/Tk.  Pozwala na pracÄ™
+z wieloma fontami rÃ³wnoczeÅ›nie.
 
 %prep
 %setup -q
