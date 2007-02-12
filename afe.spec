@@ -2,7 +2,7 @@
 # TODO: add icon
 #
 Summary:	Another (PSF) Font Editor
-Summary(pl.UTF-8):   afe (jeszcze jeden edytor fontów PSF)
+Summary(pl.UTF-8):	afe (jeszcze jeden edytor fontów PSF)
 Name:		afe
 Version:	20020901
 Release:	2
