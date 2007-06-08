@@ -4,27 +4,30 @@
 Summary:	Another (PSF) Font Editor
 Summary(pl.UTF-8):	afe (jeszcze jeden edytor fontów PSF)
 Name:		afe
-Version:	20020901
-Release:	2
+Version:	20070609
+Release:	1
 License:	GPL v2
 Group:		X11/Applications
-Source0:	http://www.mat.uni.torun.pl/~witek/%{name}-%{version}.src.tar.bz2
-# Source0-md5:	fb82267c1f0fd347c189a40595f3b430
+Source0:	http://republika.pl/rkd/%{name}-%{version}.tar.bz2
+# Source0-md5:	19486c937061858f270bc378e3f5994a
 Source1:	%{name}.desktop
-Requires:	/usr/bin/wish
-BuildArch:	noarch
+BuildRequires:	qmake
+BuildRequires:	qt-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Afe is simple PSF font editor written in Tcl/Tk. Editing many fonts
-with afe is very easy.
+Afe is a simple PSF font editor.
 
 %description -l pl.UTF-8
-Afe to prosty edytor fontów PSF napisany w Tcl/Tk.  Pozwala na pracę
+Afe to prosty edytor fontów PSF napisany w Tcl/Tk. Pozwala na pracę
 z wieloma fontami równocześnie.
 
 %prep
 %setup -q
+QTDIR=%{_prefix}
+export QTDIR
+qmake
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
