@@ -19,8 +19,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Afe is a simple PSF font editor.
 
 %description -l pl.UTF-8
-Afe to prosty edytor fontów PSF napisany w Tcl/Tk. Pozwala na pracę
-z wieloma fontami równocześnie.
+Afe to prosty edytor fontów PSF. Pozwala na pracę z wieloma
+fontami równocześnie.
 
 %prep
 %setup -q
