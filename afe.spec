@@ -4,15 +4,17 @@
 Summary:	Another (PSF) Font Editor
 Summary(pl.UTF-8):	afe (jeszcze jeden edytor fontów PSF)
 Name:		afe
-Version:	20070609
+Version:	20080102
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://republika.pl/rkd/%{name}-%{version}.tar.bz2
-# Source0-md5:	19486c937061858f270bc378e3f5994a
+# Source0-md5:	c518075962146907659afc833217b31c
 Source1:	%{name}.desktop
-BuildRequires:	qmake
-BuildRequires:	qt-devel
+BuildRequires:	QtCore-devel
+BuildRequires:	QtGui-devel
+BuildRequires:	qt4-build
+BuildRequires:	qt4-qmake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -24,9 +26,7 @@ fontami równocześnie.
 
 %prep
 %setup -q
-QTDIR=%{_prefix}
-export QTDIR
-qmake
+qt4-qmake
 %{__make}
 
 %install
