@@ -11,10 +11,11 @@ Group:		X11/Applications
 Source0:	http://republika.pl/rkd/%{name}-%{version}.tar.bz2
 # Source0-md5:	c518075962146907659afc833217b31c
 Source1:	%{name}.desktop
+URL:		http://rkd.republika.pl/
 BuildRequires:	QtCore-devel
 BuildRequires:	QtGui-devel
-BuildRequires:	qt4-build
-BuildRequires:	qt4-qmake
+BuildRequires:	qt4-build >= 4.3.3-3
+BuildRequires:	qt4-qmake >= 4.3.3-3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -26,7 +27,7 @@ fontami równocześnie.
 
 %prep
 %setup -q
-qt4-qmake
+qmake-qt4
 %{__make}
 
 %install
