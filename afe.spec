@@ -4,12 +4,12 @@
 Summary:	Another (PSF) Font Editor
 Summary(pl.UTF-8):	afe (jeszcze jeden edytor fontów PSF)
 Name:		afe
-Version:	20080102
+Version:	20080105
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://republika.pl/rkd/%{name}-%{version}.tar.bz2
-# Source0-md5:	c518075962146907659afc833217b31c
+# Source0-md5:	2fecedc07a047eaadf9d4d74825afce9
 Source1:	%{name}.desktop
 URL:		http://rkd.republika.pl/
 BuildRequires:	QtCore-devel
