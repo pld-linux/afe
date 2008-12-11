@@ -4,18 +4,16 @@
 Summary:	Another (PSF) Font Editor
 Summary(pl.UTF-8):	afe (jeszcze jeden edytor fontów PSF)
 Name:		afe
-Version:	20080105
+Version:	20081211
 Release:	1
-License:	GPL v2
+License:	Public Domain
 Group:		X11/Applications
-Source0:	http://republika.pl/rkd/%{name}-%{version}.tar.bz2
-# Source0-md5:	2fecedc07a047eaadf9d4d74825afce9
+Source0:	http://rkd.republika.pl/AFE/%{name}
+# Source0-md5:	151af89fb919da9d3487c1c95c26c8c1
 Source1:	%{name}.desktop
-URL:		http://rkd.republika.pl/
-BuildRequires:	QtCore-devel
-BuildRequires:	QtGui-devel
-BuildRequires:	qt4-build >= 4.3.3-3
-BuildRequires:	qt4-qmake >= 4.3.3-3
+URL:		http://rkd.republika.pl/AFE/afe.html
+BuildArch:	noarch
+Requires:	python-wxPython
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -26,15 +24,12 @@ Afe to prosty edytor fontów PSF. Pozwala na pracę z wieloma
 fontami równocześnie.
 
 %prep
-%setup -q
-qmake-qt4
-%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_desktopdir}}
 
-install %{name} $RPM_BUILD_ROOT%{_bindir}
+install %{SOURCE0} $RPM_BUILD_ROOT%{_bindir}
 install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 
 %clean
@@ -42,6 +37,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README AUTHORS
 %attr(755,root,root) %{_bindir}/*
 %{_desktopdir}/*.desktop
