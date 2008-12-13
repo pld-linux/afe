@@ -12,16 +12,16 @@ Source0:	http://rkd.republika.pl/AFE/%{name}
 # Source0-md5:	151af89fb919da9d3487c1c95c26c8c1
 Source1:	%{name}.desktop
 URL:		http://rkd.republika.pl/AFE/afe.html
-BuildArch:	noarch
 Requires:	python-wxPython
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Afe is a simple PSF font editor.
 
 %description -l pl.UTF-8
-Afe to prosty edytor fontów PSF. Pozwala na pracę z wieloma
-fontami równocześnie.
+Afe to prosty edytor fontów PSF. Pozwala na pracę z wieloma fontami
+równocześnie.
 
 %prep
 
